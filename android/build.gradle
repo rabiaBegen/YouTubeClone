@@ -12,10 +12,42 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("com.android.tools.build:gradle")
+        classpath("com.android.tools.build:gradle:8.1.0")  // En güncel AGP sürümü
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
+        // Google services Gradle eklentisini buraya ekleyin
+        classpath("com.google.gms:google-services:4.4.2")
     }
 }
 
 apply plugin: "com.facebook.react.rootproject"
+apply plugin: "com.android.application"
+
+// Google services Gradle eklentisini buraya ekleyin
+apply plugin: "com.google.gms.google-services"
+
+android {
+    compileSdkVersion 34
+    defaultConfig {
+        applicationId "com.example.yourappname"
+        minSdkVersion 23
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+    }
+    // Diğer ayarlar burada olabilir
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+
+    // Firebase BoM'u ekleyin
+    implementation platform('com.google.firebase:firebase-bom:33.1.2')
+
+    // Firebase Analytics SDK'sını ekleyin
+    implementation 'com.google.firebase:firebase-analytics'
+
+    // Kullanmak istediğiniz diğer Firebase ürünleri için bağımlılıkları ekleyin
+    // Örneğin, Firebase Authentication kullanmak istiyorsanız:
+    // implementation 'com.google.firebase:firebase-auth'
+}

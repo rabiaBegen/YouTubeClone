@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "810748468377",
+    "project_id": "clone-dfaad",
+    "storage_bucket": "clone-dfaad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810748468377:android:acd97715aa564c9aa36c08",
+        "android_client_info": {
+          "package_name": "com.example.YouTubeClone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7NRZ7K_DgBfiJZtwen72dusHQmmjzw3U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
